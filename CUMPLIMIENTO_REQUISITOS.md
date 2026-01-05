@@ -137,20 +137,18 @@ data.pdf
    - Búsqueda y ordenamiento
    - Importación de PDF desde UI
 
-## ⚠️ Notas sobre Archivos Generados
+## ✅ Archivos Generados
 
 **Requisito mencionado**: Generar archivos `raw.json`, `raw.csv`, `normalized.json`, `normalized.csv`
 
-**Estado**: ⚠️ **NO IMPLEMENTADO** (pero no es crítico)
+**Estado**: ✅ **IMPLEMENTADO**
 
-- Los datos se procesan en memoria
-- No se generan archivos intermedios
-- Esto es aceptable ya que:
-  - Los datos se cargan directamente a MySQL
-  - Los archivos serían temporales de todas formas
-  - La documentación dice "pueden ser temporales"
-
-**Si se requiere**, se puede agregar fácilmente guardando los arrays antes de cargar a BD.
+- ✅ Se generan automáticamente en la carpeta `data/` al importar un PDF
+- ✅ `raw.json` y `raw.csv`: Contienen los datos extraídos del PDF (formato crudo)
+- ✅ `normalized.json` y `normalized.csv`: Contienen los datos normalizados (formato estándar)
+- ✅ Los archivos se guardan antes de cargar los datos a MySQL
+- ✅ Implementación: `records.service.ts` - métodos `saveJsonFile()` y `saveCsvFile()`
+- ✅ Ubicación: `backend/data/raw.json`, `backend/data/raw.csv`, `backend/data/normalized.json`, `backend/data/normalized.csv`
 
 ## ✅ Resumen Final
 
@@ -164,7 +162,7 @@ data.pdf
 | **Normalización status** | ✅ | Lowercase, valores estándar |
 | **Flujo Extract → Normalize → Load** | ✅ | Implementado completamente |
 | **Upsert por sourceId** | ✅ | Idempotente |
-| **Archivos intermedios** | ⚠️ | No generados (no crítico) |
+| **Archivos intermedios** | ✅ | Generados automáticamente (raw.json, raw.csv, normalized.json, normalized.csv) |
 
 ## 🎯 Conclusión
 

@@ -1,5 +1,15 @@
 # Prueba Técnica -
 
+## 📸 Screenshots de la Aplicación
+
+### Pantalla de Login
+![Login](https://cdn.discordapp.com/attachments/1424448965457477844/1457826356132970590/image.png?ex=695d6a18&is=695c1898&hm=766c0cd4e3cb2c6e4b8bd7c5b6986a4201e9381cf9defb308d1b2e2a66b6288b)
+
+### Panel de Registros
+![Panel de Registros](https://cdn.discordapp.com/attachments/1424448965457477844/1457826475297476850/image.png?ex=695d6a34&is=695c18b4&hm=d512a6de5a4461fa4b7b7ecdeaf9d1b06ccc7fdf56897e6fa2858b35cab91e68)
+
+---
+
 ## 📋 Descripción del Desafío
 
 Este repositorio contiene un proyecto base para implementar un **pipeline completo de ingesta de datos** desde un PDF hacia una base de datos MySQL, con una API REST en NestJS y una interfaz web en Vue 3 + Vuetify 3, terminando de mostrar los datos en un PowerBI con una conexión directa desde la base de datos.
